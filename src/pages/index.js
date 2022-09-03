@@ -1,13 +1,13 @@
 import React from "react";
 import "globalStyles/index.scss";
-import { Header, Seo } from "components";
+import { Home, Seo } from "components";
 
 function LandingPage() {
    return (
       <>
          <Seo />
          <main>
-            <Header />
+            <Home />
          </main>
       </>
    );

@@ -1,21 +1,19 @@
 import React from "react";
-import { Container } from "components/styles";
 import Logo from "components/logo";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { navLinksData } from "data";
 import { FiMenu } from "react-icons/fi";
+import { useReducer } from "react";
 
+// styles
 const StyledHeader = styled.header`
-   padding-block: 2rem;
-   color: var(--cl-neutral-2);
-`;
-
-const StyledContainer = styled(Container)`
    position: relative;
    display: flex;
    justify-content: space-between;
    align-items: center;
    gap: 1rem;
+   padding-block: 2rem;
+   color: var(--cl-neutral-2);
 `;
 
 const LogoAndBurgerBtnContainer = styled.div`
@@ -35,19 +33,37 @@ const BurgerBtn = styled.button`
 `;
 
 const Nav = styled.nav`
+   --cl-mobile-bg: var(--cl-accent);
+   position: relative;
    display: flex;
    align-items: center;
    gap: 1rem;
 
    @media (max-width: 767.99px) {
+      ${({ show }) =>
+         !show
+            ? css`
+                 display: none;
+              `
+            : null}
       position: absolute;
       flex-direction: column;
-      top: 100%;
-      right: 0;
-      width:300px;
+      top: calc(100% - .7rem);
+      right: 0.8rem;
+      width: 300px;
       color: var(--cl-white);
       padding-block: 1.5rem;
-      background-color: var(--cl-primary-1);
+      background-color: var(--cl-mobile-bg);
+
+      &:after {
+         content: "";
+         position: absolute;
+         right: 0;
+         bottom: 100%;
+         border: 25px solid;
+         border-color: transparent var(--cl-mobile-bg) transparent transparent;
+         transform: translateY(50%);
+      }
    }
 `;
 
@@ -79,7 +95,10 @@ const LoginBtn = styled.button`
    }
 `;
 
+// components
 function Header() {
+   const [showNav, toggleNav] = useReducer((state) => !state, false);
+
    const navLinksElements = navLinksData.map((singleNavLinkData, index) => (
       <NavLink key={index} href={singleNavLinkData.link}>
          {singleNavLinkData.text}
@@ -88,16 +107,16 @@ function Header() {
 
    return (
       <StyledHeader>
-         <StyledContainer>
-            <LogoAndBurgerBtnContainer>
-               <Logo />
-               <BurgerBtn aria-label="open menu">{<FiMenu aria-hidden="true" />}</BurgerBtn>
-            </LogoAndBurgerBtnContainer>
-            <Nav>
-               {navLinksElements}
-               <LoginBtn>login</LoginBtn>
-            </Nav>
-         </StyledContainer>
+         <LogoAndBurgerBtnContainer>
+            <Logo />
+            <BurgerBtn aria-label="open menu" onClick={toggleNav}>
+               {<FiMenu aria-hidden="true" />}
+            </BurgerBtn>
+         </LogoAndBurgerBtnContainer>
+         <Nav show={showNav}>
+            {navLinksElements}
+            <LoginBtn>login</LoginBtn>
+         </Nav>
       </StyledHeader>
    );
 }
