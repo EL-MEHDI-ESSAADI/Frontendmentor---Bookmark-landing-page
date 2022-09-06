@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { navLinksData } from "data";
 import { FiMenu } from "react-icons/fi";
 import { useReducer } from "react";
+import { PrimaryBtn } from "components/styles";
 
 // styles
 const StyledHeader = styled.header`
@@ -33,7 +34,7 @@ const BurgerBtn = styled.button`
 `;
 
 const Nav = styled.nav`
-   --cl-mobile-bg: var(--cl-accent);
+   --cl-mobile-bg: var(--cl-accent-1);
    position: relative;
    display: flex;
    align-items: center;
@@ -47,6 +48,7 @@ const Nav = styled.nav`
               `
             : null}
       position: absolute;
+      z-index: var(--zIndex-dropdown);
       flex-direction: column;
       top: calc(100% - .7rem);
       right: 0.8rem;
@@ -77,22 +79,15 @@ const NavLink = styled.a`
    }
 `;
 
-const LoginBtn = styled.button`
-   padding: 0.5rem 2rem;
-   border: 2px solid var(--cl-primary-2);
-   border-radius: 0.3rem;
-   font-weight: 500;
-   letter-spacing: 1px;
-   text-transform: uppercase;
-   color: var(--cl-white);
-   background-color: var(--cl-primary-2);
-   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-   transition: var(--trn-fast-smooth-color);
+const LoginBtn = styled(PrimaryBtn)`
+   --text-color: var(--cl-white);
+   --hover-text-color: var(--cl-primary-2);
+   --bg-color:var(--cl-primary-2);
+   --hover-bg-color:transparent;
+   --border-color: var(--cl-primary-2);
 
-   &:hover {
-      color: var(--cl-primary-2);
-      background-color: transparent;
-   }
+   padding-inline: 2rem;
+   letter-spacing: 1px;
 `;
 
 // components

@@ -13,6 +13,16 @@
    // --bp-lg: 992px;
    // --bp-xl: 1200px;
    // --bp-xxl: 1400p;
+   /*--- z-index ---*/
+   --zIndex-dropdown: 1000;
+   --zIndex-sticky: 1020;
+   --zIndex-fixed: 1030;
+   --zIndex-offcanvas-backdrop: 1040;
+   --zIndex-offcanvas: 1045;
+   --zIndex-modal-backdrop: 1050;
+   --zIndex-modal: 1055;
+   --zIndex-popover: 1070;
+   --zIndex-tooltip: 1080;
    /*--- colors ---*/
 
    /* values */
@@ -26,7 +36,8 @@
    --cl-primary-2: var(--cl-soft-red);
    --cl-neutral-1: var(--cl-grayish-blue);
    --cl-neutral-2: var(--cl-very-dark-blue);
-   --cl-accent: #0A014F;
+   --cl-accent-1: #0A014F;
+   --cl-accent-2: #f7f7f8;
 
    /* functionality */
    // body
@@ -66,6 +77,7 @@ body {
    line-height: 1.4;
    color: var(--cl-body-text);
    background-color: var(--cl-body-bg);
+   overflow-x: hidden;
 }
 
 p {
