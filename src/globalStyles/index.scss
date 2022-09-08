@@ -80,6 +80,13 @@ body {
    overflow-x: hidden;
 }
 
+main > section {
+   padding-bottom: 2rem;
+   &:not(:first-of-type) {
+      padding-top: 1.5rem;
+   }
+}
+
 p {
    font-size: 18px;
 }
@@ -116,6 +123,7 @@ button {
    background-color: initial;
    text-transform: capitalize;
    font: inherit;
+   color: inherit;
 }
 
 svg {
@@ -225,6 +233,10 @@ h6 {
 .overflow-hidden {
    overflow: hidden !important;
 }
+
+.text-center {
+   text-align: center;
+}	
 
 
 /* colors */
