@@ -80,6 +80,14 @@ body {
    overflow-x: hidden;
 }
 
+main>section {
+   padding-bottom: 2rem;
+
+   &:not(:first-of-type) {
+      padding-top: 1.5rem;
+   }
+}
+
 p {
    font-size: 18px;
 }
@@ -116,6 +124,7 @@ button {
    background-color: initial;
    text-transform: capitalize;
    font: inherit;
+   color: inherit;
 }
 
 svg {
@@ -226,6 +235,10 @@ h6 {
    overflow: hidden !important;
 }
 
+.text-center {
+   text-align: center;
+}
+
 
 /* colors */
 
@@ -330,6 +343,12 @@ $utilities: (
    "padding-right": ("prefix": "pe",
       "values": $spacers,
    ),
+   "padding-inline": ("prefix": "px",
+      "values": $spacers,
+   ),
+   "padding-block": ("prefix": "py",
+      "values": $spacers,
+   ),
    "margin": ("prefix": "m",
       "values": $spacers,
    ),
@@ -345,6 +364,12 @@ $utilities: (
    "margin-right": ("prefix": "me",
       "values": $spacers,
    ),
+   "margin-inline": ("prefix": "mx",
+      "values": $spacers,
+   ),
+   "margin-block": ("prefix": "my",
+      "values": $spacers,
+   ),
 );
 
 
@@ -354,6 +379,18 @@ $utilities: (
 
 .uppercase {
    text-transform: uppercase;
+}
+
+.text-lowercase {
+   text-transform: lowercase;
+}
+
+.text-uppercase {
+   text-transform: uppercase;
+}
+
+.text-capitalize {
+   text-transform: capitalize;
 }
 
 .fw-400 {

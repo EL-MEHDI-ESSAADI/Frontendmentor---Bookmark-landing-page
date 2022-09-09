@@ -1,6 +1,6 @@
 import React from "react";
 import "globalStyles/index.scss";
-import { Home, Seo } from "components";
+import { DownloadSection, FeaturesSection, Home, Seo } from "components";
 
 function LandingPage() {
    return (
@@ -8,6 +8,8 @@ function LandingPage() {
          <Seo />
          <main>
             <Home />
+            <FeaturesSection />
+            <DownloadSection />
          </main>
       </>
    );

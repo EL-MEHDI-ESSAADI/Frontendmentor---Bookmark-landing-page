@@ -6,14 +6,14 @@ import styled from "styled-components";
 
 // styles
 const StyledHome = styled.section`
-   position: relative;
+   display:grid;
+   min-height: 100vh;
 `;
 const HomeContainer = styled(Container)`
    display: grid;
    grid-template-rows: min-content 1fr;
    align-items: center;
-   min-height: 100vh;
-   padding-bottom: 3rem;
+   height: 100%;
 `;
 const HeroContainer = styled.div`
    display: flex;
