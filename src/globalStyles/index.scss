@@ -38,6 +38,7 @@
    --cl-neutral-2: var(--cl-very-dark-blue);
    --cl-accent-1: #0A014F;
    --cl-accent-2: #f7f7f8;
+   --cl-accent-3: #9194a14d;
 
    /* functionality */
    // body
@@ -395,6 +396,9 @@ $utilities: (
 
 .fw-400 {
    font-weight: 400;
+}
+.fw-500 {
+   font-weight: 500;
 }
 
 // generate utility classes
