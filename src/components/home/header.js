@@ -50,7 +50,7 @@ const Nav = styled.nav`
       position: absolute;
       z-index: var(--zIndex-dropdown);
       flex-direction: column;
-      top: calc(100% - .7rem);
+      top: calc(100% - 0.7rem);
       right: 0.8rem;
       width: 300px;
       color: var(--cl-white);
@@ -82,11 +82,12 @@ const NavLink = styled.a`
 const LoginBtn = styled(PrimaryBtn)`
    --text-color: var(--cl-white);
    --hover-text-color: var(--cl-primary-2);
-   --bg-color:var(--cl-primary-2);
-   --hover-bg-color:transparent;
+   --bg-color: var(--cl-primary-2);
+   --hover-bg-color: transparent;
    --border-color: var(--cl-primary-2);
 
    padding-inline: 2rem;
+   text-transform: uppercase;
    letter-spacing: 1px;
 `;
 
