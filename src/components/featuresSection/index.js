@@ -26,7 +26,7 @@ const TabBtnsContainer = styled.div`
 const TabBtn = styled.button`
    position: relative;
    padding: 0.5rem 0.75rem 1rem;
-   border-bottom: 1px solid var(--cl-neutral-1);
+   border-bottom: 1px solid var(--cl-accent-3);
    font-size: 18px;
    color: var(--cl-neutral-2);
    transition: var(--trn-fast-smooth-color);
