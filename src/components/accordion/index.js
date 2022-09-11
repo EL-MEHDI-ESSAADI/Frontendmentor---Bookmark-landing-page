@@ -74,7 +74,7 @@ function Accordion({ question, answer, isActive, id, setActiveQuestionId }) {
       <StyledAccordion ref={accordionRef}>
          <Header ref={headerRef} role="button" onClick={handelClick}>
             <Question className="fs-5 fw-400">{question}</Question>
-            <Arrow isActive={isActive} size="1.5rem" />
+            <Arrow isActive={isActive} size="1.5rem" aria-hidden="true"/>
          </Header>
          <p ref={answerParagraphRef} className="py-3">
             {answer}

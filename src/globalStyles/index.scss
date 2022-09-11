@@ -266,6 +266,9 @@ h6 {
 .text-neutral-2 {
    color: var(--cl-neutral-2);
 }
+.text-white {
+   color: var(--cl-white);
+}
 
 /* typography */
 
@@ -414,6 +417,12 @@ $map in $utilities {
          #{$property}: $v;
       }
    }
+}
+
+// flex
+
+.justify-content-center {
+   justify-content: center;
 }
 
 /* ------------------- */

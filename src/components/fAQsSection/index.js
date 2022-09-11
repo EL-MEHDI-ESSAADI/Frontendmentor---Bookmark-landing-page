@@ -32,7 +32,7 @@ function FAQsSection() {
       />
    ));
    return (
-      <StyledFAQsSection>
+      <StyledFAQsSection id="FAQs">
          <Container>
             <h2 className="fs-3 text-center">Frequently Asked Questions</h2>
             <p className="mt-3 text-center">
