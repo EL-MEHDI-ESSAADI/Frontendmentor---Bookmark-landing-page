@@ -93,3 +93,5 @@ export const fAQsData = [
       id: 3,
    },
 ];
+
+export const regexEmailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;

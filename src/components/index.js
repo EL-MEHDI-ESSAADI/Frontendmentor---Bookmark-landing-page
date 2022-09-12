@@ -5,3 +5,4 @@ export { default as FeaturesSection } from "./featuresSection";
 export { default as DownloadSection } from "./downloadSection";
 export { default as FAQsSection } from "./fAQsSection";
 export { default as Accordion } from "./accordion";
+export { default as ContactSection } from "./contactSection";
