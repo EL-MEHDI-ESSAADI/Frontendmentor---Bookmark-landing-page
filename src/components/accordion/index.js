@@ -34,7 +34,7 @@ const Header = styled.header`
    }
 `;
 
-const Arrow = styled(IoIosArrowDown)`
+const Arrow = styled(IoIosArrowDownIcon)`
    color: var(--cl-primary-1);
    transition: var(--trn-fast-smooth-color);
 
@@ -45,6 +45,12 @@ const Arrow = styled(IoIosArrowDown)`
          transform: rotate(-180deg);
       `}
 `;
+
+// components
+
+function IoIosArrowDownIcon({className}) {
+   return <IoIosArrowDown className={className} size="1.5rem" aria-hidden="true" />;
+}
 
 function Accordion({ question, answer, isActive, id, setActiveQuestionId }) {
    const headerRef = useRef();
@@ -74,7 +80,7 @@ function Accordion({ question, answer, isActive, id, setActiveQuestionId }) {
       <StyledAccordion ref={accordionRef}>
          <Header ref={headerRef} role="button" onClick={handelClick}>
             <Question className="fs-5 fw-400">{question}</Question>
-            <Arrow isActive={isActive} size="1.5rem" aria-hidden="true"/>
+            <Arrow isActive={isActive} />
          </Header>
          <p ref={answerParagraphRef} className="py-3">
             {answer}
