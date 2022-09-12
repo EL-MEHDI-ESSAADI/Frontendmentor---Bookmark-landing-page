@@ -6,3 +6,4 @@ export { default as DownloadSection } from "./downloadSection";
 export { default as FAQsSection } from "./fAQsSection";
 export { default as Accordion } from "./accordion";
 export { default as ContactSection } from "./contactSection";
+export { default as HomePageFooter } from "./homePageFooter";

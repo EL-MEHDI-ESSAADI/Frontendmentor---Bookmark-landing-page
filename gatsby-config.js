@@ -1,7 +1,7 @@
 module.exports = {
    siteMetadata: {
-      title: "bookmark landing page",
-      siteUrl: `https://X`,
+      title: "Frontend Mentor - Bookmark landing page",
+      siteUrl: `https://frontend-mentor-bookmark.netlify.app`,
       siteType: "challenge",
       bigDescription:
          "bookmark landing page challenge from frontendmentor",

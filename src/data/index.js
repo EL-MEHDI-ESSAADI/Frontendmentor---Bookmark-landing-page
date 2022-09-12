@@ -1,3 +1,5 @@
+import {AiFillFacebook, AiOutlineTwitter} from "react-icons/ai"
+
 export const navLinksData = [
    {
       text: "features",
@@ -12,6 +14,20 @@ export const navLinksData = [
       link: "#contact",
    },
 ];
+
+export const socialMediaLinksData = [
+   {
+      name: "facebook",
+      Icon: AiFillFacebook,
+      link: "#",
+   },
+   {
+      name: "twitter",
+      Icon: AiOutlineTwitter,
+      link: "#",
+   }
+]
+
 
 export const featuresData = [
    {

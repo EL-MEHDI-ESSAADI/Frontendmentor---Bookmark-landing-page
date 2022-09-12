@@ -81,7 +81,7 @@ body {
    overflow-x: hidden;
 }
 
-main>section {
+main> section {
    padding-bottom: 2rem;
 
    &:not(:first-of-type) {
@@ -92,11 +92,6 @@ main>section {
 p {
    font-size: 18px;
 }
-
-// :not(img)::selection {
-//    background: var(--clr-accentBg-2);
-//    color: var(--clr-accentText-1);
-// }
 
 img::selection {
    background-color: transparent;
@@ -129,7 +124,7 @@ button {
 }
 
 svg {
-   display: inline-block;
+   display: block;
 }
 
 h1,
@@ -184,27 +179,6 @@ h6 {
 // in case the browser support :focus-visible I would remove the outline if the focus didn't happened cause of keyboard
 :is(a, button, summary, input, textarea):focus:not(:focus-visible) {
    outline: none ;
-}
-
-// manual animations
-@keyframes fadeInTop {
-   from {
-      transform: translateY(3rem);
-      opacity: 0;
-   }
-
-   to {
-      transform: translateY(0rem);
-      opacity: 1;
-   }
-}
-
-.fadeInScrollElement {
-   opacity: 0;
-
-   @media (max-width: 767.9px) {
-      animation-delay: 0s !important;
-   }
 }
 
 /* ------------------- */
