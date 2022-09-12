@@ -168,7 +168,7 @@ h6 {
 
 
 // focus outline
-:is(a, button, input, textarea, summary),
+:is(a, button, summary, input, textarea),
 .outlined {
    --outline-size: max(2px, 0.08em);
    --outline-style: dashed;
@@ -177,12 +177,13 @@ h6 {
 
 :is(a, button, summary, input, textarea):is(:focus, :focus-visible),
 .outlined {
-   outline: var(--outline-size) var(--outline-style) var(--outline-color) !important;
-   outline-offset: var(--outline-offset, var(--outline-size)) !important;
+   outline: var(--outline-size) var(--outline-style) var(--outline-color) ;
+   outline-offset: var(--outline-offset, var(--outline-size)) ;
 }
 
+// in case the browser support :focus-visible I would remove the outline if the focus didn't happened cause of keyboard
 :is(a, button, summary, input, textarea):focus:not(:focus-visible) {
-   outline: none !important;
+   outline: none ;
 }
 
 // manual animations
@@ -214,6 +215,17 @@ h6 {
    display: flex;
    gap: var(--flex-gap, 1rem); // now flex support gap
 }
+
+.position-relative {
+   position: relative;
+}
+
+// flex
+
+.justify-content-center {
+   justify-content: center;
+}
+
 
 .grid {
    display: grid;
@@ -266,6 +278,7 @@ h6 {
 .text-neutral-2 {
    color: var(--cl-neutral-2);
 }
+
 .text-white {
    color: var(--cl-white);
 }
@@ -400,6 +413,7 @@ $utilities: (
 .fw-400 {
    font-weight: 400;
 }
+
 .fw-500 {
    font-weight: 500;
 }
@@ -419,11 +433,6 @@ $map in $utilities {
    }
 }
 
-// flex
-
-.justify-content-center {
-   justify-content: center;
-}
 
 /* ------------------- */
 /* normalize css      */
@@ -618,6 +627,7 @@ fieldset {
 
 input {
    overflow: visible;
+   border: none;
 }
 
 /**
